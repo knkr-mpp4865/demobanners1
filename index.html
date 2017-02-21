@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Studio Enabler Required -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="format-detection" content="telephone=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>De-Brand_HTML5_Banner</title>
+		<script src="http://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/external_hosted/polymer/custom.elements.min.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/ads/ci/ytclosebutton/1/ytclosebutton_min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.tinyscrollbar.min.js"></script>
+		<script src="DCRM_HTML5_inPage_970x250.js" type="text/javascript"></script>	
+        <script type="text/javascript" src="gwdyoutube_min.js"></script>
+        <script type="text/javascript" src="CSSPlugin.min.js"></script>
+        <script type="text/javascript" src="TweenLite.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:300" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="gwdyoutube_style.css">
+  
+		<style>
+			@font-face {
+		    font-family: 'Source Sans Pro';
+		    font-style: normal;
+		    src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGEo0As1BFRXtCDhS66znb_k.woff2) format('woff2');
+			}
+			@charset "UTF-8";
+			/* CSS Document */
+			
+			/* Default style, feel free to remove if not needed. */
+			body, body * {font-family:arial;}
+			#doubleclick_logo_dc{position:absolute;top: 4px;left: 4px;}
+			/* Div layer for the entire banner. */
+			#container_dc {position: absolute;width: 968px;height: 248px;border:1px solid #666666;top: 0px;left: 0px;margin: auto;overflow:hidden; background:white;}
+			#content_dc {position: absolute;width: 100%;height: 100%;top: 0px;left: 0px;background-color: #FFF;}
+			/* Invisible button for background clickthrough. */
+			#background_exit_dc {position: absolute;width: 968px;height: 248px;top: 0px;left: 0px;cursor: pointer;opacity: 0;}
+			/* Div layer containing the video player and video controls. */
+			#video_container_dc {position: absolute;width: 408px;height: 226px;left: -19px;background:no-repeat;border:1px solid black;top: -1px;opacity:0;}
+			
+			.feature {top: -11px;left:10px;width: 400px;height: 228px;position: absolute;}
+			/* Video button hiding an positioning */
+			
+			#medicationText{ width:96px; height:12px; position:absolute; top:265px; right:87px;font-size:10.5px; color:#fd513a;}
+			#prescribingText{width:124px; height:12px; position:absolute;top:265px; right:185px; font-size:10.5px; color:#fd513a;}
+			focus {outline:none;}
+			::-moz-focus-inner {border:0;}
+			#footer_content_main{height:225px;width:300px; background-color:#ffffff; position:absolute;right:0px; bottom:-260px; color:#000; cursor:default;  overflow:hidden; padding-left:9px;  font-size:11px; }
+			#scrollbar1 #viewport {width:280px; height:192px; overflow:hidden; position:relative; top:0px; left:0px;}
+			#scrollbar1 #overview {width:280px; list-style:none; position:absolute; left:0; top:0}
+			#scrollbar1 #scrollbar{position: absolute; right:1px; top: 50px; width:15px; background-color:#efefef; cursor:pointer;}
+			#scrollbar1 #thumb {width:15px; background-color:#848182; cursor: pointer;overflow: hidden;position: absolute;top:0px; }
+			.top_arrow { background:url(top_arrow.png) no-repeat; width:15px; height:15px;position: absolute;top:35px;right:1px; cursor:pointer; }
+			.bottom_arrow{ background:url(bottom_arrow.png) no-repeat; width:15px; height:15px;position: absolute;bottom: 0px;right:1px; cursor:pointer; }
+			ul{ margin-left:-19px; margin-top:-10px;}
+			li{ list-style:none;}
+			li::before{ content: '\2022'; color:#ff3c09; margin-left:-5px; position:relative; left:-8px; top:1px; font-size:15px;}
+			.isiHeading{ font-size:12px;}
+			#videoPlay{ width:408px; height:215px; position:absolute;background:black;  cursor:pointer; border:0px solid red; border-top-right-radius:30px; border-bottom-left-radius:30px; top:-1px; left:8px; }
+			#poster{ width:408px; height:215px; position:absolute;background:url(mainPlay.jpg) no-repeat;  cursor:pointer; border:0px solid red; border-top-right-radius:30px; border-bottom-left-radius:30px; top:-1px; left:8px; display:block; z-index:501 }
+
+			#bg1{ width:940px; height:220px;  border: 15px solid #cad400; border-top-right-radius: 95px; border-bottom-left-radius: 95px; position:absolute;top:0px; opacity:1; overflow:hidden; z-index:1;}
+			#peopleText{ width:653px; height:30px; background:url(peopleText.png); position:absolute; top:33px; left:147px; opacity:0;}
+			#everyDayText{ width:156px; height:32px; background:url(everyDayText.png); position:absolute; top:72px; left:390px; opacity:0}
+			#peoples{ width:940px; height:220px; background:url(peoples.jpg); position:absolute; top:0px; opacity:0;}
+			.sub_heading{ color:#0ca8e3; font-size:14px; margin-bottom:0;}
+			#lastFrame{ width:210px; height:190px; position:absolute; left:438px; top:5px; opacity:0;}
+			#forAdultText{  position:relative; top:0; left:0; font-size:13px; font-family:arial;}
+			#logo{  width:186px; height:63px; position:relative; top:10px; left:-4px; }
+			#peopleHaveText{position:relative; top:-50px; left:0; font-size:15px; font-family: 'Nunito', sans-serif; letter-spacing:-0.2px; color:black;}
+			#cta{ width:186px; height:31px; background:url(cta.png) no-repeat; position:absolute; left:438px; bottom:28px;opacity:0; cursor:pointer; z-index:5}
+			#cta:hover{ width:186px; height:31px; background:url(ctaHover.png); position:absolute; left:438px; bottom:28px;opacity:0; cursor:pointer;}
+			#yt-close{ z-index:99999;  background:rgba(0,0,0,0);}
+			#yt-close span{ z-index:99999; background:rgba(0,0,0,0);font-size:12px;}
+			#forAdult{ width:970px; height:17px; background:#0aa8e2; opacity:0; position:absolute; top:0; left:0; font-size:12px; color:white; padding:2px 0px 2px 10px;}
+			#exit1,#exit1_1,#exit1_2,#exit2,#exit3,#exit3_1,#exit4,#exit4_1,#exit5,#background_exit_dc{ cursor:pointer; display:inline; text-decoration:underline; color:#0ca8e3}
+			#emptyDiv{ width:422px; height:248px; background:rgba(255,255,255,0.00); position:absolute; left:0px; top:0px;}
+			#emptyDiv2{width:396px;height:216px;  position:absolute; border:10px solid #cad400; border-top-right-radius: 30px; border-bottom-left-radius: 30px; left:3px; top:-12px; }
+			#peoplesEmptyDiv{ width:970px; height:250px; background:rgba(0,0,0,0);z-index:200; position:absolute; top:0;left:0; display:block;}
+			@-moz-document url-prefix() { 
+			 li::before{top:2px; }
+			}
+			#ytp-0 {position:absolute;top: 0;left: 0;width:100%;height:100%;z-index: 500;}
+		</style>
+	</head>
+	<body>
+		<!-- Call JS Initial Function when below has loaded in -->
+		<div id="container_dc" onmousedown="return false" onmouseover="return false" onmousemove="return false">
+        	<div id="bg1">
+				<div id="exit1_1">
+					<div id="peoples"></div>
+					<div id="peopleText"></div>
+					<div id="everyDayText"></div>
+				</div>
+				<div id="video_container_dc">
+					<div id="exit"></div>
+                    <div id="exit1_2">
+                    	<div id="emptyDiv"></div>
+                    </div>
+                    <div id="emptyDiv2"></div>
+					
+					<div id="videoPlay">
+                    	<div class="feature" id="feature"></div>
+                    </div>
+                    <div id="poster"></div>
+                 </div>
+			</div>
+			
+			
+			<div id="exit1">
+            	<div id="peoplesEmptyDiv"></div>
+				<div id="cta"></div>
+                <div id="lastFrame"> 
+                	<div id="forAdultText">For adults with type 2 diabetes, <br>in addition to diet and exercise </div>
+                    <div id="logo"><img src="logo.png" width="100%" height="100%"></div>		                    <div id="logo"></div>
+                    <div id="peopleHaveText">Ready to see how <br>Brand may help <br>lower your A1C? </div>
+                </div>
+                
+			</div>
+            <div id="exit3">
+            	<div id="prescribingText"> <u>Prescribing Information</u><img style=" position:relative; top:2px; left:2px;" src="Brand_pdf_icon.png" width="9" height="9" alt="pdf"></div>
+			</div>
+			<div id="exit4">
+				<div id="medicationText"><u>Medication Guide</u><img style=" position:relative; top:2px; left:2px;" src="Brand_pdf_icon.png" width="9" height="9" alt="pdf"></div>
+			</div>
+			<div id="background_exit_dc"></div>
+			<div id="footer_content_main">
+            
+				<p class="sub_heading"><b>IMPORTANT SAFETY INFORMATION</b></p>
+				<div class="top_arrow"></div>
+				<div id="scrollbar1">
+					<div id="scrollbar">
+						<div id="track">
+							<div id="thumb"></div>
+						</div>
+					</div>
+					<div id="viewport">
+						<div id="overview">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</p>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed </p>
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</p>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed </p>
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</p>
+                            <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed </p>
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                           
+							<br><br>
+						</div>
+					</div>
+					<div class="bottom_arrow"></div>
+				</div>
+			</div>
+			<ci-ytclosebutton theme="white" id="yt-close" shadow="true"></ci-ytclosebutton>
+		</div>
+		
+		<script>
+			var tween1;
+			    function pageLoadedHandler(){
+					
+				tween18 = TweenLite.to(video_container_dc, 2, {delay:7, opacity:1,onComplete:function(){
+					}});
+				tween5 = TweenLite.to(peoples, 1.5, {delay:0, opacity:1});
+				tween2 = TweenLite.to(everyDayText, 1, {delay:3,opacity:1});
+				tween3 = TweenLite.to(peopleText, 1, {delay:2, opacity:1});
+				tween6 = TweenLite.to(peopleText, 1, {delay:6, opacity:0});
+				tween7 = TweenLite.to(everyDayText, 1, {delay:6,opacity:0});
+				tween8 = TweenLite.to(bg1, 0.5, {delay:6.5,width:390});
+				tween9 = TweenLite.to(bg1, 0.5, {delay:6.5,top:7,height:214,left:5,borderTopRightRadius:30,borderBottomLeftRadius:30, borderWidth:10});
+				tween10 = TweenLite.to(peoples, 3, {delay:7, opacity:0});
+				tween19 = TweenLite.to(peoplesEmptyDiv, 1, {delay:7, display:'none'});
+				tween12 = TweenLite.to(background_exit_dc,1, {delay:7, width:660});
+				tween13 = TweenLite.to(footer_content_main, 1, {delay:7,bottom:0});
+				tween14 = TweenLite.to(lastFrame, 3, {delay:7, opacity:1});
+				tween15 = TweenLite.to(cta, 2, {delay:7, opacity:1});
+				tween16 = TweenLite.to(prescribingText, 1, {delay:7, top:5});
+				tween17 = TweenLite.to(medicationText, 1, {delay:7, top:5});
+				
+				TweenLite.to(medicationText, 1, {delay:7, top:5});
+				TweenLite.to(medicationText, 1, {delay:7, top:5});
+				TweenLite.to(medicationText, 1, {delay:7, top:5});
+				
+			scrollTrap();
+			$('#footer_content_main').tinyscrollbar();
+		}
+		  
+			function scrollTrap(){
+				$('#footer_content_main').tinyscrollbar();	
+				var scrollTrackHeight=$("#track").height();
+				var scrollThumbCurrPos=0;var scrollThumbMaxPos=38;// top position value of thumb div when collapse
+				var scrollThumbMinPos=0;
+				
+				
+				$('.bottom_arrow').bind('click',function(){
+					if($(this).hasClass("activeScroller")){
+						$(this).removeClass("activeScroller");
+						clearInterval(autoScroll)
+			
+					}else{
+						scrollTrackHeight=$("#track").height();
+					scrollThumbCurrPos=parseFloat($("#thumb").css('top'));//$("#thumb").position().top;
+					var maxOverviewTop = $("#overview").height()-$("#viewport").height()+0; //  top position value of overview div when full scroll down by mousewheel or drag but not clicking bottomArrow
+					if(scrollTrackHeight>100){
+						scrollThumbMaxPos=208.50; // top position value of thumb div when expand
+					}
+					else{
+						scrollThumbMaxPos=50;// top position value of thumb div when collapse
+					}
+					scrollThumbCurrPos=scrollThumbCurrPos+5;
+					scrollThumbCurrPos = Math.min(scrollThumbCurrPos,scrollThumbMaxPos);
+					if(scrollThumbCurrPos<=scrollThumbMaxPos){
+							var currContentTop=$("#overview").position().top;
+							if(currContentTop<=0){
+								currContentTop=currContentTop-10;
+								currContentTop=currContentTop*(-1);
+							}
+							currContentTop = Math.min(currContentTop,maxOverviewTop);
+							$('#footer_content_main').tinyscrollbar_update(currContentTop);
+					}
+					}
+					
+				});
+				
+				var scrollInterval=null;	
+				$('.bottom_arrow , .top_arrow').bind('mousedown',function(e){
+				
+				if($(e.target).hasClass("bottom_arrow"))
+				
+				scrollInterval=setInterval(function(){$('.bottom_arrow').trigger("click")},100);
+				else
+				scrollInterval=setInterval(function(){$('.top_arrow').trigger("click")},100);
+				});
+				
+				$('.bottom_arrow , .top_arrow').bind('mouseup mousemove',function(e){
+				
+				clearInterval(scrollInterval);
+				
+				});
+				
+				$(".top_arrow").bind('click',function(){
+					if($(this).hasClass("activeScroller")){
+						$(this).removeClass("activeScroller");
+						clearInterval(autoScroll)
+			
+					}else{
+						scrollTrackHeight=$("#track").height();
+					scrollThumbCurrPos=$("#thumb").position().top;
+					scrollThumbCurrPos=scrollThumbCurrPos-5;
+					if(scrollThumbCurrPos<scrollThumbMinPos && $("#thumb").position().top>=scrollThumbMinPos)
+					scrollThumbCurrPos=$("#thumb").position().top;
+					if(scrollThumbCurrPos>=scrollThumbMinPos){
+						var currContentTop=$("#overview").position().top;
+						if(currContentTop<0){
+								currContentTop=currContentTop+10;
+								currContentTop=currContentTop*(-1);
+								currContentTop = Math.max(currContentTop,0);
+						}
+						else
+						currContentTop = 0;
+						$("#footer_content_main").tinyscrollbar_update(currContentTop);
+					}
+					}
+					
+				});
+				
+			}
+			
+			$( "#poster" ).click(function() {
+  			
+				$("#poster").fadeOut(1000);
+				creative.dom.ytplayer0.play();
+				
+			});
+			if (navigator.userAgent.match(/msie/i) || navigator.userAgent.match(/trident/i)){
+	$(".feature").css('top','-12px');
+	$(".feature").css('height','230px');
+	
+}	
+			function bgExitHandler1(e) {
+			    Enabler.exit("click1");
+			/*Onclick of links it need to stop the animation nd entrs to last frame*/
+				tween3.kill();
+				tween6.kill();
+				tween7.kill();
+				tween8.kill();
+				tween9.kill();
+				tween10.kill();
+				tween12.kill();
+				tween13.kill();
+				tween14.kill();
+				tween15.kill();
+				tween16.kill();
+				tween17.kill();
+				
+				tween6 = TweenLite.to(peopleText, 0, {delay:0, opacity:0});
+				tween7 = TweenLite.to(everyDayText, 0, {delay:0,opacity:0});
+				tween8 = TweenLite.to(bg1, 0, {delay:0,width:390});
+				tween9 = TweenLite.to(bg1, 0, {delay:0,top:7,height:214,left:5,borderTopRightRadius:30,borderBottomLeftRadius:30, borderWidth:10});
+				tween10 = TweenLite.to(peoples, 0, {delay:0, opacity:0});
+				tween19 = TweenLite.to(peoplesEmptyDiv, 0, {delay:0, display:'none'});
+				tween12 = TweenLite.to(background_exit_dc,0, {delay:0, width:660});
+				tween13 = TweenLite.to(footer_content_main, 0, {delay:0,bottom:0});
+				tween14 = TweenLite.to(lastFrame, 0, {delay:0, opacity:1});
+				tween15 = TweenLite.to(cta, 0, {delay:0, opacity:1});
+				tween16 = TweenLite.to(prescribingText, 0, {delay:0, top:5});
+				tween17 = TweenLite.to(medicationText, 0, {delay:0, top:5});
+				tween1 = TweenLite.to(video_container_dc, 0, {delay:0, opacity:1});
+				tween19 = TweenLite.to(peoplesEmptyDiv, 0, {delay:0, display:'none'});
+				/*Onclick of links it need to pause the video*/
+				creative.dom.ytplayer0.pause();
+				
+			}
+			
+			var exit1_1 = document.getElementById('exit1_1');
+			exit1_1.onclick = bgExitHandler1;
+			var exit1_2 = document.getElementById('exit1_2');
+			exit1_2.onclick = bgExitHandler1;
+			var exit1_3 = document.getElementById('background_exit_dc');
+			exit1_3.onclick = bgExitHandler1;
+			
+			
+			function bgExitHandler2(e) {
+			    Enabler.exit("click2");
+				/*Onclick of links it need to pause the video*/
+				creative.dom.ytplayer0.pause();
+			}
+			
+			function bgExitHandler3(e) {
+			    Enabler.exit("click3");
+				/*Onclick of links it need to pause the video*/
+				creative.dom.ytplayer0.pause();
+			}
+			function bgExitHandler4(e) {
+				Enabler.exit("click4");
+				
+				/*Onclick of links it need to pause the video*/
+				creative.dom.ytplayer0.pause();
+			}
+			document.getElementById("exit1").addEventListener("click", bgExitHandler1, false);
+			document.getElementById("exit2").addEventListener("click", bgExitHandler2, false); 
+			document.getElementById("exit3").addEventListener("click", bgExitHandler3, false);  
+			document.getElementById("exit4").addEventListener("click", bgExitHandler4, false); 
+			
+			
+		</script>
+	</body>
+</html>
